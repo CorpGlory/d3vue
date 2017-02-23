@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
-    "publish": "npm run build && git checkout gh-pages && rm -rf static; rm index.html ; mv dist/static . && mv -f dist/index.html . && sed -i 's//static/static/g' index.html && git add . && git push"
+    "publish": "npm run build && git checkout gh-pages && rm -rf static; rm index.html ; mv dist/static . && mv -f dist/index.html . && sed -i '' 's,/static,static,g' index.html && git add . && git push"
   },
   "dependencies": {
     "d3": "^4.6.0",
