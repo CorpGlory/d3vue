@@ -2,7 +2,7 @@
   <div id="app">
     <a href='#/'> <h1> D3.js vs Vue.js examples </h1> </a>
     <h2>{{ $route.name }}</h2>
-    <topNav />
+    <top-nav />
     <router-view></router-view>
   </div>
 </template>
