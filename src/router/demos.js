@@ -7,9 +7,9 @@ export const routes = [
     component: require('d3-components/1-circle-mount')
   },
   {
-    name: 'Circle render',
-    path: '/2-circle-mount',
-    component: require('d3-components/2-circle-render')
+    name: 'Rect render',
+    path: '/2-rect-render',
+    component: require('d3-components/2-rect-render')
   }
 ].map(r => {
   var res = r;

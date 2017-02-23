@@ -7,9 +7,13 @@
 <script>
 const d3 = require('d3');
 export default {
-  data () {
-    console.log(this.$route);
-    return {}
+  mounted: function() {
+    var svg = d3.select(this.$el).select('svg');
+    svg
+      .append('circle')
+      .attr('cx', '250')
+      .attr('cy', '150')
+      .attr('r', '100')
   }
 }
 </script>
