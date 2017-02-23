@@ -15,7 +15,7 @@ export const routes = [
   var res = r;
   res.href = "#" + r.path;
   res.source = config.githubLink +
-               'tree/master/src/d3-components' +
+               config.d3ComponentsPath +
                r.path + '.vue'
   return res;
 })

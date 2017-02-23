@@ -1,3 +1,4 @@
 {
-  "githubLink": "https://github.com/corpglory/d3vue/"
+  "githubLink": "https://github.com/corpglory/d3vue/",
+  "d3ComponentsPath": "tree/master/src/d3-components"
 }
