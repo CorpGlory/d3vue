@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
-    "publish": "npm run build && git checkout gh-pages && mv dist/static . && mv dist/index.html . && git add . && git push"
+    "publish": "npm run build && git checkout gh-pages && mv -f dist/static . && mv -f dist/index.html . && git add . && git push"
   },
   "dependencies": {
     "d3": "^4.6.0",
