@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1> D3.js vs Vue.js templates </h1>
+    <a href='#/'> <h1> D3.js vs Vue.js examples </h1> </a>
     <router-view></router-view>
   </div>
 </template>
@@ -11,12 +11,16 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   margin-top: 30px;
+}
+a {
+  color: black;
+  text-decoration: none;
 }
 </style>

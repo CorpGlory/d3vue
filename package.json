@@ -9,6 +9,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "d3": "^4.6.0",
     "vue": "^2.1.10",
     "vue-router": "^2.2.0"
   },

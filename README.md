@@ -1,5 +1,7 @@
 # d3vue
 
+A list of Vue.js / D3.js examples. 
+
 > An example project of how use Vue.js with D3.js
 
 ## Build Setup
