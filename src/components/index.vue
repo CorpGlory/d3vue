@@ -1,8 +1,8 @@
 <template>
   <div class="hello">
     <ul>
-      <li v-for="item in itemz">
-        <a :href="item.path | hashed">{{ item.name  }}</a>
+      <li v-for="item in items">
+        <a :href="item.href">{{ item.name  }}</a>
       </li>
     </ul>
   </div>
@@ -10,23 +10,16 @@
 
 <script>
 import { routes } from 'router/demos'
+
 export default {
-  name: 'hello',
   data () {
     return {
-      itemz: routes
-    }
-  },
-  filters: {
-    hashed: function (value) {
-      if (!value) return ''
-      return '#' + value;
+      items: routes
     }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h1, h2 {
   font-weight: normal;
