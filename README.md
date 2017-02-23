@@ -1,8 +1,12 @@
 # d3vue
 
-A list of Vue.js / D3.js examples. 
+A list of Vue.js / D3.js examples.
 
-> An example project of how use Vue.js with D3.js
+## Goals
+
+* Help to learn Vue.js by people who already know D3.js
+* Show advantages of using D3.js on top of Vue.js
+* Collect best practices of problem solving with good software design
 
 ## Build Setup
 
