@@ -3,13 +3,13 @@ const config = require('config.json');
 export const routes = [
   {
     name: 'Circle mount',
-    path: '/1-circle-mount',
-    component: require('d3-components/1-circle-mount')
+    path: '/circle-mount',
+    component: require('d3-components/circle-mount')
   },
   {
-    name: 'Rect render',
-    path: '/2-rect-render',
-    component: require('d3-components/2-rect-render')
+    name: 'Size controller',
+    path: '/size-controller',
+    component: require('d3-components/size-controller')
   }
 ].map(r => {
   var res = r;
