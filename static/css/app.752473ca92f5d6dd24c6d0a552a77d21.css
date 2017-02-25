@@ -30,6 +30,7 @@ a[data-v-098bb42e]:hover {
 }
 .prev[data-v-098bb42e] {
   left: 0px;
+  text-align: left;
 }
 .source[data-v-098bb42e] {
   left:100px;
@@ -128,6 +129,88 @@ a[data-v-098bb42e]:hover {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+  #bars-style-basic-svg
+  will be added to global namespace
+*/
+#bars-style-basic-svg .one {
+  fill: #ffc300
+}
+#bars-style-basic-svg .two {
+  fill: #c70039
+}
+#bars-style-basic-svg .three {
+  fill: #571845
+}
+#bars-style-basic-svg {
+  margin-top: 40px;
+}
+
+.one[data-v-0e55e99d] {
+  fill: #154890
+}
+.two[data-v-0e55e99d] {
+  fill: #e1d4c0
+}
+.three[data-v-0e55e99d] {
+  fill: #ff6600
+}
+svg[data-v-0e55e99d] {
+  margin-top: 40px;
+}
+
 h1[data-v-417810ac], h2[data-v-417810ac] {
   font-weight: normal;
 }
@@ -152,4 +235,4 @@ a[data-v-417810ac]:hover {
   text-decoration: underline;
 }
 
-/*# sourceMappingURL=app.6d91e7f242696e554ecda5be3dbdb7d1.css.map*/
+/*# sourceMappingURL=app.752473ca92f5d6dd24c6d0a552a77d21.css.map*/
