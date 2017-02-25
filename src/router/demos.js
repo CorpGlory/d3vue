@@ -10,6 +10,16 @@ export const routes = [
     name: 'Size controller',
     path: '/size-controller',
     component: require('d3-components/size-controller')
+  },
+  {
+    name: 'Bars: styles basic',
+    path: '/bars-style-basic',
+    component: require('d3-components/bars-style-basic')
+  },
+  {
+    name: 'Bars: styles scoped',
+    path: '/bars-style-scoped',
+    component: require('d3-components/bars-style-scoped')
   }
 ].map(r => {
   var res = r;

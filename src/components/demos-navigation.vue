@@ -1,7 +1,7 @@
 <template>
   <div id="holder">
     <div class="links">
-      <a v-if="prev" :href="prev.href" class="prev"> < previous </a>
+      <a v-if="prev" :href="prev.href" class="prev"> < prev </a>
       <a :href="sourceHref" class="source"> source </a>
       <a v-if="next" :href="next.href" class="next"> next > </a>
     </div>
@@ -70,6 +70,7 @@ a:hover {
 
 .prev {
   left: 0px;
+  text-align: left;
 }
 
 .source {

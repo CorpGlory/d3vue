@@ -1,6 +1,6 @@
 # d3vue
 
-A list of Vue.js / D3.js examples.
+A list of Vue.js / D3.js [examples](https://github.com/corpglory/d3vue/tree/master/src/d3-components)
 
 ## Goals
 

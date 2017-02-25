@@ -1,10 +1,11 @@
 <!--
 Links:
   Components: https://vuejs.org/v2/guide/components.html
+  .vue files: https://vuejs.org/v2/guide/single-file-components.html
 
 Advanced:
   Component Lifecyrcle: https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram
-  Virtaul DOM: https://medium.com/js-dojo/whats-new-in-vue-js-2-0-virtual-dom-dc4b5b827f40#.hexwxh9m3
+  Virtual DOM: https://medium.com/js-dojo/whats-new-in-vue-js-2-0-virtual-dom-dc4b5b827f40#.hexwxh9m3
 -->
 
 <template>
