@@ -29,7 +29,6 @@ export const routes = [
   }
 ].map(r => {
   var res = r;
-  res.href = "#" + r.path;
   res.source = config.githubLink +
                config.d3ComponentsPath +
                r.path +
