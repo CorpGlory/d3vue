@@ -179,8 +179,6 @@ a[data-v-098bb42e]:hover {
 
 
 
-
-
 /*
   #bars-style-basic-svg
   will be added to global namespace
@@ -218,7 +216,7 @@ ul[data-v-417810ac] {
   /*list-style-type: none;*/
   padding: 0;
   margin: auto;
-  width: 150px;
+  width: 300px;
 }
 li[data-v-417810ac] {
   /*display: inline-block;*/
@@ -235,4 +233,4 @@ a[data-v-417810ac]:hover {
   text-decoration: underline;
 }
 
-/*# sourceMappingURL=app.752473ca92f5d6dd24c6d0a552a77d21.css.map*/
+/*# sourceMappingURL=app.ce71c824008124ca69d1106e30881c77.css.map*/
