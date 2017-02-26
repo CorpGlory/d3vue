@@ -4,9 +4,9 @@ A list of Vue.js / D3.js [examples](https://github.com/corpglory/d3vue/tree/mast
 
 ## Goals
 
-* Help to learn Vue.js by people who already know D3.js
+* Collect best practices
+* Make edu materials for Vue.js/D3.js learners
 * Show advantages of using D3.js on top of Vue.js
-* Collect best practices of problem solving with good software design
 
 ## Build Setup
 

@@ -1,8 +1,8 @@
 {
   "name": "d3vue",
   "version": "1.0.0",
-  "description": "An example project of how use Vue.js with D3.js",
-  "author": "CorpGlory <twitter.com/corpglory>",
+  "description": "An educational with list of Vue.JS vs D3.js examples",
+  "author": "Alexey Velikiy [CorpGlory] <twitter.com/corpglory>",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
