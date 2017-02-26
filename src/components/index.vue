@@ -29,7 +29,7 @@ ul {
   /*list-style-type: none;*/
   padding: 0;
   margin: auto;
-  width: 150px;
+  width: 300px;
 }
 
 li {

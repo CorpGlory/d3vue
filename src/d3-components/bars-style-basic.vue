@@ -26,8 +26,6 @@ export default {
       {name: 'three', val: 200}
     ]
 
-    console.log(this.$styles);
-
     var x = d3.scaleBand()
       .rangeRound([0, width]).padding(0.1)
       .domain(data.map(d => d.name));
