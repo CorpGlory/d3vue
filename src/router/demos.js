@@ -26,6 +26,13 @@ export const routes = [
     path: '/pie-chart-local-component',
     folder: true,
     component: require('d3-components/pie-chart-local-component/index')
+  },
+  {
+    name: 'Bubbles: nested routes',
+    path: '/bubbles-nested-routes',
+    alias: '/bubbles-nested-routes/*',
+    folder: true,
+    component: require('d3-components/bubbles-nested-routes/bubbles')
   }
 ].map(r => {
   var res = r;

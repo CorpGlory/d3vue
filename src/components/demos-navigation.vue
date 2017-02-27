@@ -39,8 +39,8 @@ export default {
   },
   methods: {
     findIndex: function() {
-      var me = this.$route.path;
-      return routes.findIndex(r => r.path === me);
+      var me = this.$route.name;
+      return routes.findIndex(r => r.name === me);
     }
   }
 }
