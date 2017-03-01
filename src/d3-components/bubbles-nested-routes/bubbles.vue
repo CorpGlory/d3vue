@@ -7,7 +7,7 @@ Links:
 -->
 
 <template>
-  <svg width="500" height="300"></svg>
+  <svg width="500" height="400"></svg>
 </template>
 
 <script>
@@ -18,26 +18,26 @@ const d3 = require('d3');
 export default {
   props: ['groupBy', 'data'],
   watch: {
-    groupBy: function(newData) {
-      this.ph2.setLayout(this.groupBy);
+    groupBy: function(groupBy) {
+      this.ph2.setLayout(groupBy);
     },
-    data: function(newData) {
-
+    data: function(data) {
+      this.ph2.setData(data);
     }
   },
   mounted: function() {
-    console.log(this.$el);
     var svg = d3.select(this.$el);
     var width = +svg.attr('width');
     var height = +svg.attr('height');
-    this.ph2 = new PH2(svg);
-  },
-  methods: {
-    refreshLayout: function() {
 
-    }
+    var that = this;
+    var bubblesG = svg.append('g').attr('transform', `translate(${width/2}, ${height/2})`)
+
+    // TODO: remove it later
+    d3.csv('static/data/earthquakes.csv', function(data) {
+      that.ph2 = new PH2(bubblesG, data);
+    });
   }
-
 
 }
 </script>
