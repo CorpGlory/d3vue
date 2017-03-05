@@ -4,7 +4,7 @@ export default class {
     this.simulation = simulation;
   }
   init() {
-
+    
   }
   enter() {
 

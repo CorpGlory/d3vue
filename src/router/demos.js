@@ -32,7 +32,7 @@ export const routes = [
     path: '/bubbles-nested-routes',
     alias: '/bubbles-nested-routes/*',
     folder: true,
-    component: require('d3-components/bubbles-nested-routes/bubbles')
+    component: require('d3-components/bubbles-nested-routes/index')
   }
 ].map(r => {
   var res = r;

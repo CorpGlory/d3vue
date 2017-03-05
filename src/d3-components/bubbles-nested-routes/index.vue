@@ -14,63 +14,70 @@ Links:
 
 <template>
   <div class="holder">
-    <ul class="menu">
-      <li v-for="link in links">
-        <a :href="link.path"> {{link.name}} </a>
-      </li>
-    </ul>
-    {{layout}}
+    <groupMenu :links="links" :activeLink="activeLink" />
+    {{activeLink.layout}}
   </div>
 </template>
 
 <script>
 
+const menu = require('d3-components/bubbles-nested-routes/menu');
+
 const MY_URL_PREFIX = 'bubbles-nested-routes';
 const _ = require('lodash');
+
 const LINKS = [
-  {
-    name: 'Together',
-    path: '',
-    layout: 'together'
-  },
-  {
-    name: 'By contry',
-    path: '/contry',
-    layout: 'contry'
-  },
-  {
-    name: 'By year',
-    path: '/year',
-    layout: 'year'
-  }
-].map(d => {
-  d.path = '#/' + MY_URL_PREFIX + d.path;
-  return d;
-});
+    {
+      name: 'Together',
+      path: '',
+      layout: 'together'
+    },
+    {
+      name: 'By country',
+      path: '/country',
+      layout: 'country'
+    },
+    {
+      name: 'By year',
+      path: '/year',
+      layout: 'year'
+    }
+  ].map(d => {
+    d.path = '#/' + MY_URL_PREFIX + d.path;
+    d.active = false;
+    return d;
+  });
+
 
 export default {
+  components: {
+    groupMenu: menu
+  },
   data: function() {
     return {
-      layout: this.resolveLayout(),
+      activeLink: this.findActiveLink()
     }
   },
   computed: {
-    links: function () {
+    links: function() {
       return LINKS;
     }
   },
   methods: {
-    resolveLayout: function() {
+    findActiveLink: function() {
+      _.each(LINKS, l => {
+        l.active = false;
+      })
       var link = _.find(LINKS, l => l.path == '#' + this.$route.path);
       if(!link) {
         link = LINKS[0];
       }
-      return link.layout;
+      return link;
     }
   },
   watch: {
     '$route' (to, from) {
-      this.layout = this.resolveLayout();
+      this.activeLink = this.findActiveLink();
     }
   }
 }
