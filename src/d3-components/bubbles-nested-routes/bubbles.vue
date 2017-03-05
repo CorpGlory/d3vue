@@ -35,7 +35,7 @@ export default {
 
     // TODO: remove it later
     d3.csv('static/data/earthquakes.csv', function(data) {
-      that.ph2 = new PH2(bubblesG, data, 'country');
+      that.ph2 = new PH2(bubblesG, data, that.groupBy);
     });
   }
 

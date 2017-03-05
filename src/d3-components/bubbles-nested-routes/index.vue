@@ -15,22 +15,23 @@ Links:
 <template>
   <div class="holder">
     <groupMenu :links="links" :activeLink="activeLink" />
-    {{activeLink.layout}}
+    <bubbles :groupBy="activeLink.layout" />
   </div>
 </template>
 
 <script>
 
 const menu = require('d3-components/bubbles-nested-routes/menu');
+const bubbles = require('d3-components/bubbles-nested-routes/bubbles');
 
 const MY_URL_PREFIX = 'bubbles-nested-routes';
 const _ = require('lodash');
 
 const LINKS = [
     {
-      name: 'Together',
+      name: 'None',
       path: '',
-      layout: 'together'
+      layout: 'total'
     },
     {
       name: 'By country',
@@ -51,7 +52,8 @@ const LINKS = [
 
 export default {
   components: {
-    groupMenu: menu
+    groupMenu: menu,
+    bubbles: bubbles
   },
   data: function() {
     return {

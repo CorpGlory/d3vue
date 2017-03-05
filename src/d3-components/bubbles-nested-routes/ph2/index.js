@@ -12,6 +12,7 @@ import _ from 'lodash';
 export default class PH2 {
   constructor(elem, data, layoutName) {
     this.svg = elem;
+    this.data = data;
     this.setData(data);
     this._init();
     this.layout = undefined;
@@ -32,6 +33,7 @@ export default class PH2 {
 
     if(this.layout) {
       this.layout.exit();
+
     }
     this.layout = this.layouts[layoutName];
     if(!this.layout.inited) {
@@ -39,61 +41,45 @@ export default class PH2 {
       this.layout.inited = true;
     }
     this.layout.enter();
+    this.simulation.alpha(1);
+    this.simulation.restart();
   }
 
   setData(data) {
-    var range = data.length;
-    this.data = {
-      nodes:data.map(d => ({
-        r: +d.Magnitude
-      })),
-      links:d3.range(0, range).map(
-        function(){ return {
-          source:~~d3.randomUniform(range)(),
-          target:~~d3.randomUniform(range)()
-        }
-      })
-    };
+    this.nodes = data.map(d => ({
+      r: +d.Magnitude
+    }))
   }
 
   _init() {
     this.simulation = d3.forceSimulation()
-      //.force("link", d3.forceLink().id(d => d.index))
       .force("collide", d3.forceCollide(d => d.r + 5).iterations(16))
       .force("center", d3.forceCenter(0, 0))
+      .force("charge", d3.forceManyBody().strength(-1))
 
     this._initLayouts();
-    var link = this.svg.append("g")
-      .attr("class", "links")
-      .selectAll("line")
-      .data(this.data.links)
-      .enter()
-      .append("line")
-      .attr("stroke", "black")
 
     var node = this.svg.append("g")
       .attr("class", "nodes")
       .selectAll("circle")
-      .data(this.data.nodes)
+      .data(this.nodes)
       .enter()
       .append("circle")
       .attr("r", d => d.r )
 
+    var that = this;
     var ticked = function() {
-      link
-        .attr("x1", d => d.source.x)
-        .attr("y1", d => d.source.y)
-        .attr("x2", d => d.target.x)
-        .attr("y2", d => d.target.y);
       node
         .attr("cx", d => d.x )
         .attr("cy", d => d.y );
+      if(that.layout.ticked) {
+        that.layout.ticked();
+      }
     }
 
     this.simulation
-      .nodes(this.data.nodes)
+      .nodes(this.nodes)
       .on("tick", ticked);
-
 
   }
 

@@ -1,15 +1,11 @@
 <template>
   <div class="holder">
-
     <ul class="menu">
       <li>Group by: </li>
-
       <li v-for="link in alinks">
         <a :href="link.item.path" :class="{active: link.active}"> {{link.item.name}} </a>
       </li>
     </ul>
-
-    {{activeLink.path}}
   </div>
 </template>
 
@@ -32,7 +28,7 @@ export default {
 </script>
 
 <style scoped>
-  .menu{
+  .menu {
     padding: 0;
     margin: 0;
   }
