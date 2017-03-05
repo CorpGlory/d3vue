@@ -33,7 +33,6 @@ export default class PH2 {
 
     if(this.layout) {
       this.layout.exit();
-
     }
     this.layout = this.layouts[layoutName];
     if(!this.layout.inited) {
@@ -53,9 +52,10 @@ export default class PH2 {
 
   _init() {
     this.simulation = d3.forceSimulation()
-      .force("collide", d3.forceCollide(d => d.r + 5).iterations(16))
-      .force("center", d3.forceCenter(0, 0))
-      .force("charge", d3.forceManyBody().strength(-1))
+      .force("index-collide", d3.forceCollide(d => d.r + 5).iterations(16))
+      .force("index-x", d3.forceX().strength(0.05))
+      .force("index-y", d3.forceY().strength(0.05))
+
 
     this._initLayouts();
 
