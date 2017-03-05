@@ -34,15 +34,15 @@ const LINKS = [
     layout: 'together'
   },
   {
+    name: 'By contry',
+    path: '/contry',
+    layout: 'contry'
+  },
+  {
     name: 'By year',
     path: '/year',
     layout: 'year'
-  },
-  {
-    name: 'By sex',
-    path: '/sex',
-    layout: 'sex'
-  },
+  }
 ].map(d => {
   d.path = '#/' + MY_URL_PREFIX + d.path;
   return d;

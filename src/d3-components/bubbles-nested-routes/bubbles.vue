@@ -12,7 +12,7 @@ Links:
 
 <script>
 
-import PH2 from './ph2';
+import PH2 from './ph2/index';
 const d3 = require('d3');
 
 export default {

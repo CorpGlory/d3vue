@@ -2,6 +2,11 @@
 
 const d3 = require('d3');
 
+const layoutTotal = require('./layout-total');
+const layoutContry = require('./layout-contry');
+
+const _ = require('lodash');
+
 // TODO: do it d3-way so I can use selection.call()
 
 export default class PH2 {
@@ -9,21 +14,33 @@ export default class PH2 {
     this.svg = elem;
     this.setData(data);
     this._init();
+    this.layout = undefined;
     this.setLayout(layoutName);
   }
 
   setLayout(layoutName) {
-    // TODO: something special
-    this.simulation.alpha(1).restart();
+    if(!this.layouts) {
+      throw new Error('Layouts are not defined');
+    }
+    if(!this.layouts[layoutName]) {
+      throw new Error('Can`t find layout ' + layoutName);
+    }
+    if(this.layout) {
+      this.layout.exit();
+    }
+    this.layout = this.layouts[layoutName];
+    this.layout.enter();
   }
 
   setData(data) {
     var range = data.length;
     this.data = {
       nodes:data.map(d => ({
-        label: "l"+d ,r:+d.Magnitude
+        r: +d.Magnitude
       })),
-      links:d3.range(0, range).map(function(){ return {source:~~d3.randomUniform(range)(), target:~~d3.randomUniform(range)()} })
+      links:d3.range(0, range).map(
+        function(){ return {source:~~d3.randomUniform(range)(), target:~~d3.randomUniform(range)()}
+      })
     };
   }
 
@@ -65,12 +82,17 @@ export default class PH2 {
       .nodes(this.data.nodes)
       .on("tick", ticked);
 
-    this.simulation.force("link")
+    this.simulation
+      .force("link")
       .links(this.data.links);
   }
 
-  _initNodeYearPos() {
-    // TODO: fill
+  _initLayouts() {
+    this.layouts = {
+      'total': layoutTotal,
+      'county': layoutContry,
+    };
+    _.this.layouts
   }
 
 }
