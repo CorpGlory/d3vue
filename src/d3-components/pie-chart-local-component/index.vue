@@ -13,7 +13,7 @@ Data:
 
 <template>
   <div>
-    <h3>Most popular female names in the world</h3>
+    <h4>Most popular female names in the world</h4>
     <pie :data="names" />
     <br>
     <button v-if="canAddAName" v-on:click="addName">Add a name</button>

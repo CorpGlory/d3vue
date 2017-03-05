@@ -2,7 +2,7 @@
 
 import layoutTotal from './layout-total';
 import layoutCountry from './layout-contry';
-import layoutYear from './layout-year';
+import layoutDay from './layout-day';
 
 const d3 = require('d3');
 import _ from 'lodash';
@@ -53,9 +53,8 @@ export default class PH2 {
   _init() {
     this.simulation = d3.forceSimulation()
       .force("index-collide", d3.forceCollide(d => d.r + 5).iterations(16))
-      .force("index-x", d3.forceX().strength(0.05))
-      .force("index-y", d3.forceY().strength(0.05))
-
+      .force("index-x", d3.forceX().strength(0.04))
+      .force("index-y", d3.forceY().strength(0.04))
 
     this._initLayouts();
 
@@ -87,7 +86,7 @@ export default class PH2 {
     this.layouts = {
       'total': layoutTotal,
       'country': layoutCountry,
-      'year': layoutYear
+      'day': layoutDay
     };
 
     for (var k in this.layouts) {

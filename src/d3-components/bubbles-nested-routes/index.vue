@@ -14,8 +14,10 @@ Links:
 
 <template>
   <div class="holder">
+    <!-- <h4>Earthquakes in september 2012</h4> -->
     <groupMenu :links="links" :activeLink="activeLink" />
     <bubbles :groupBy="activeLink.layout" />
+
   </div>
 </template>
 
@@ -39,9 +41,9 @@ const LINKS = [
       layout: 'country'
     },
     {
-      name: 'By year',
-      path: '/year',
-      layout: 'year'
+      name: 'By day',
+      path: '/day',
+      layout: 'day'
     }
   ].map(d => {
     d.path = '#/' + MY_URL_PREFIX + d.path;

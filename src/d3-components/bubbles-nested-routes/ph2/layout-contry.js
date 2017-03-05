@@ -36,10 +36,10 @@ export default class {
 
     this.nodesBefore = this.simulation.nodes();
     this.simulation
-      .force("link", d3.forceLink().id(d => d.index))
-      .force("charge", d3.forceManyBody().strength(-30))
-      .force("x", d3.forceX().strength(0.11))
-      .force("y", d3.forceY().strength(0.11))
+      .force("country-link", d3.forceLink().id(d => d.index))
+      .force("country-charge", d3.forceManyBody().strength(-30))
+      .force("country-x", d3.forceX().strength(0.11))
+      .force("country-y", d3.forceY().strength(0.11))
 
     //console.log(this.simulation.force("link").distance());
     this.simulation.force("link")//.distance(-10)
@@ -54,7 +54,7 @@ export default class {
       .append('text')
       .text(d => d.key)
       .attr("text-anchor", "middle")
-      .attr("font-size", "10")
+      .attr("font-size", "8")
 
     this.linesG = this.elem.insert("g", ":first-child");
     this.lines = this.linesG
@@ -62,11 +62,11 @@ export default class {
       .data(this.links)
       .enter()
       .append("line")
-      .attr("stroke", "#d5d5d5")
+      .attr("stroke", "#d7d7d7")
 
 
     this.simulation
-      .force("link")
+      .force("country-link")
       .links(this.links);
 
   }
@@ -83,10 +83,14 @@ export default class {
   }
 
   exit() {
-    this.simulation.nodes(this.nodesBefore);
     this.simulation
-      .force("link", null)
-      .force("charge", null)
+      .nodes(this.nodesBefore);
+    this.simulation
+      .force("country-link", null)
+      .force("country-charge", null)
+      .force("country-x", null)
+      .force("country-y", null)
+
     this.linesG.remove();
     this.countryG.remove();
   }

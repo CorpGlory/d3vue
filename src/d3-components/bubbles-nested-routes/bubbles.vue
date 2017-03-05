@@ -7,7 +7,7 @@ Links:
 -->
 
 <template>
-  <svg width="500" height="500"></svg>
+  <svg width="600" height="500"></svg>
 </template>
 
 <script>
