@@ -28,6 +28,12 @@ export const routes = [
     component: require('d3-components/pie-chart-local-component/index')
   },
   {
+    name: 'Basic map: html tooltip & events',
+    path: '/basic-map-tooltip',
+    folder: true,
+    component: require('d3-components/basic-map-tooltip/index')
+  },
+  {
     name: 'Bubbles: nested routes',
     path: '/bubbles-nested-routes',
     alias: '/bubbles-nested-routes/*',
