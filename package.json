@@ -11,7 +11,9 @@
   },
   "dependencies": {
     "d3": "^4.6.0",
+    "topojson": "^2.2.0",
     "vue": "^2.1.10",
+    "vue-resource": "^1.2.1",
     "vue-router": "^2.2.0"
   },
   "devDependencies": {
