@@ -12,14 +12,9 @@ export const routes = [
     component: require('d3-components/size-controller')
   },
   {
-    name: 'Bars: styles basic',
-    path: '/bars-style-basic',
-    component: require('d3-components/bars-style-basic')
-  },
-  {
-    name: 'Bars: styles scoped',
-    path: '/bars-style-scoped',
-    component: require('d3-components/bars-style-scoped')
+    name: 'Bars: styles',
+    path: '/bars-styles',
+    component: require('d3-components/bars-styles')
   },
   {
     name: 'Pie chart: local component & props',
