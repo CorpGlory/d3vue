@@ -30,7 +30,8 @@ See the [LICENSE](LICENSE.md) file for license rights and limitations (MIT).
 ## Credits
 
 Sponsored by [CorpGlory](http://corpglory.com)
-Updates about project: http://twitter.com/corpglory
+
+Follow as on [__Twitter__](http://twitter.com/corpglory) and [__Instagram__](https://www.instagram.com/corpglory/)
 
 If you like Data Visualisation, 
 please consider to join to community http://corpglory.com/join
