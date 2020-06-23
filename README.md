@@ -30,4 +30,6 @@ See the [LICENSE](LICENSE.md) file for license rights and limitations (MIT).
 ## About CorpGlory Inc.
 The project developed by [CorpGlory Inc.](https://corpglory.com/), a company which provides high quality software development, data visualization, Grafana and monitoring consulting.
 
+See also https://chartwerk.io/ -- make your d3/vue visualisations reusable and run them in Grafana.
+
 Follow as on [__Twitter__](http://twitter.com/corpglory) and [__Instagram__](https://www.instagram.com/corpglory/)
